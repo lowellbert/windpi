@@ -4,17 +4,19 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 #Servo Motor
+servo_pin = 18;
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(18, GPIO.OUT)
-pwm = GPIO.PWM(18, 100)
+GPIO.setup(servo_pin, GPIO.OUT)
+pwm = GPIO.PWM(servo_pin, 100)
 pwm.start(0)
+
 
 def SetAngle(angle):
 	duty = angle / 18 + 2
-	GPIO.output(18, True)
+	GPIO.output(servo_pin, True)
 	pwm.ChangeDutyCycle(duty)
 	sleep(1)
-	GPIO.output(18, False)
+	GPIO.output(servo_pin, False)
 	pwm.ChangeDutyCycle(0)
 
 #City Ids
