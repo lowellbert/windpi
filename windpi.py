@@ -42,23 +42,21 @@ print weather['wind']['deg'], "degrees"
 
 
 servo_pwm.ChangeDutyCycle(5)
-servo_pwm.ChangeDutyCycle(0)
 time.sleep(1)
 print "45 degrees"
 
 servo_pwm.ChangeDutyCycle(7.5)
-servo_pwm.ChangeDutyCycle(0)
 time.sleep(1)
 print "90 degrees"
 
 servo_pwm.ChangeDutyCycle(10)
-servo_pwm.ChangeDutyCycle(0)
 time.sleep(1)
+servo_pwm.ChangeDutyCycle(0)
 print "135 degrees"
 
 servo_pwm.ChangeDutyCycle(12.5)
-servo_pwm.ChangeDutyCycle(0)
 time.sleep(1)
+servo_pwm.ChangeDutyCycle(0)
 print "180 second"
 
 
