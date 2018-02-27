@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(servo_pin, GPIO.OUT)
 servo_frequency = 50
 servo_pwm = GPIO.PWM(servo_pin, servo_frequency)
-servo_pwm.start(2.5)
+servo_pwm.start(0)
 print "0 degrees"
 
 
@@ -41,17 +41,18 @@ print weather['wind']['speed'], "meter/sec"
 print weather['wind']['deg'], "degrees"
 
 
-servo_pwm.ChangeDutyCycle(7.5)
-time.sleep(3)
-print "90 degrees"
+servo_pwm.ChangeDutyCycle(.5)
+time.sleep(1)
+print ".5 second"
 
-servo_pwm.ChangeDutyCycle(2.5)
-time.sleep(3)
-print "0 degrees"
+servo_pwm.ChangeDutyCycle(1)
+time.sleep(1)
+print "1 second"
 
-servo_pwm.ChangeDutyCycle(12.5)
-time.sleep(3)
-print "180 degrees"
+servo_pwm.ChangeDutyCycle(1.5)
+time.sleep(1)
+print "1 second"
+
 
 servo_pwm.stop()
 GPIO.cleanup()
