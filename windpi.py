@@ -1,7 +1,7 @@
 #Get Wind information 
-import datetime, json, requests
+import datetime, time, json, requests
 import RPi.GPIO as GPIO
-from time 
+
 
 #Servo Motor
 
