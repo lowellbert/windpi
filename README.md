@@ -1,2 +1,2 @@
 # windpi
-Gets wind information
+Gets wind information and sends to motor
