@@ -14,6 +14,8 @@ weather = json.loads(url.text)
 
 
 print(now)
+print weather['name']
+print weather['dt']
 print weather['main']['temp'],"C"
 print weather['wind']['speed'], "meter/sec"
 print weather['wind']['deg'], "degrees"
