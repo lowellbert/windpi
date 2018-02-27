@@ -6,8 +6,7 @@ units = 'metric'
 calgary_cityid = '5913490'
 cityid = calgary_cityid
 url = requests.get('http://api.openweathermap.org/data/2.5/weather?id='+cityid+'&units='+units+'&APPID='+key)
-timestamp = (weather['dt'])
-value = datetime.datetime.fromtimestamp(timestamp)
+value = datetime.datetime.fromtimestamp(weather['dt'])
 
 weather = json.loads(url.text)
 
