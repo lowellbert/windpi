@@ -40,6 +40,8 @@ print weather['main']['temp'],"C"
 print weather['wind']['speed'], "meter/sec"
 print weather['wind']['deg'], "degrees"
 
+servo_pwm.ChangeDutyCycle(0)
+time.sleep(1)
 
 servo_pwm.ChangeDutyCycle(5)
 time.sleep(1)
@@ -56,7 +58,6 @@ print "135 degrees"
 
 servo_pwm.ChangeDutyCycle(12.5)
 time.sleep(1)
-servo_pwm.ChangeDutyCycle(0)
 print "180 second"
 
 
