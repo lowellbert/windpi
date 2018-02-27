@@ -37,6 +37,7 @@ print weather['wind']['speed'], "meter/sec"
 print weather['wind']['deg'], "degrees"
 
 SetAngle(0)
+sleep(5)
 SetAngle(wind_degrees)
 
 pwm.stop()
