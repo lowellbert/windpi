@@ -1,23 +1,25 @@
 #Get Wind information 
 import datetime, json, requests
 import RPi.GPIO as GPIO
-from time import sleep
+from time 
 
 #Servo Motor
-servo_pin = 18;
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(servo_pin, GPIO.OUT)
-pwm = GPIO.PWM(servo_pin, 100)
-pwm.start(0)
+servo_pin = 18;
+servo_frequency = 50
+servo_pwm = GPIO.PWM(servo_pin, servo_frequency)
+servo_pwm.start(0)
 
 
 def SetAngle(angle):
 	duty = angle / 18 + 2
 	GPIO.output(servo_pin, True)
-	pwm.ChangeDutyCycle(duty)
-	sleep(1)
+	servo_pwm.ChangeDutyCycle(duty)
+	time.sleep(1)
 	GPIO.output(servo_pin, False)
-	pwm.ChangeDutyCycle(0)
+	servo_pwm.ChangeDutyCycle(0)
 
 #City Ids
 calgary_cityid = '5913490'
@@ -38,9 +40,15 @@ print weather['main']['temp'],"C"
 print weather['wind']['speed'], "meter/sec"
 print weather['wind']['deg'], "degrees"
 
-SetAngle(0)
-sleep(2)
-SetAngle(wind_degrees)
 
-pwm.stop()
+servo_pwm.ChangeDutyCycle(7.5)
+time.sleep(1)
+
+servo_pwm.ChangeDutyCycle(2.5)
+time.sleep(1)
+
+servo_pwm.ChangeDutyCycle(12.5)
+time.sleep(1)
+
+servo_pwm.stop()
 GPIO.cleanup()
