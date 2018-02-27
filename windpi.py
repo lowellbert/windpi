@@ -9,7 +9,7 @@ url = requests.get('http://api.openweathermap.org/data/2.5/weather?id='+cityid+'
 
 weather = json.loads(url.text)
 
-print weather['name']",", weather['sys']['country']
+print weather['name']"," weather['sys']['country']
 print weather['dt']
 print weather['main']['temp'],"C"
 print weather['wind']['speed'], "meter/sec"
