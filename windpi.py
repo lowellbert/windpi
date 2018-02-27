@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 #Servo Motor
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
 pwm = GPIO.PWM(18, 50)
 pwm.start(0)
