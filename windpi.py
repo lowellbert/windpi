@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(servo_pin, GPIO.OUT)
-servo_pin = 18;
+servo_pin = 18
 servo_frequency = 50
 servo_pwm = GPIO.PWM(servo_pin, servo_frequency)
 servo_pwm.start(0)
