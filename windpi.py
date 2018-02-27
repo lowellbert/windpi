@@ -1,5 +1,6 @@
 #Get Wind information 
 from datetime import datetime
-time_now = datetime.now()
+now = datetime.now()
 
 print(time_now)
+print("%s" % now.hour, "%s" % now.minute, "%s" % now.second)
