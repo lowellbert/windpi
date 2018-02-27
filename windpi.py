@@ -6,8 +6,8 @@ from time import sleep
 #Servo Motor
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
-pwm = GPIO.PWM(18, 50)
-pwm.start(0)
+pwm = GPIO.PWM(18, 100)
+pwm.start(5)
 
 def SetAngle(angle):
 	duty = angle / 18 + 2
