@@ -10,6 +10,7 @@ GPIO.setup(servo_pin, GPIO.OUT)
 servo_frequency = 50
 servo_pwm = GPIO.PWM(servo_pin, servo_frequency)
 servo_pwm.start(2.5)
+print "0 degrees"
 
 
 def SetAngle(angle):
