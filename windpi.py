@@ -1,5 +1,5 @@
 #Get Wind information 
-import datetime, json, requests
+import json, requests
 
 key = '95334bea145c2e1d0a8e824d42a4a345'
 units = 'metric'
@@ -11,8 +11,7 @@ value = datetime.datetime.fromtimestamp(weather['dt'])
 weather = json.loads(url.text)
 
 print weather['name'], weather['sys']['country']
-#print weather['dt']
-print(value.strftime('%Y-%m-%d %H:%M:%S'))
+print weather['dt']
 print weather['main']['temp'],"C"
 print weather['wind']['speed'], "meter/sec"
 print weather['wind']['deg'], "degrees"
